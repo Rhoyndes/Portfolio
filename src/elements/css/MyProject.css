@@ -1,0 +1,330 @@
+.project {
+  margin: 50px 0;
+}
+@media screen and (max-width: 1920px) {
+  .project {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .project {
+    margin: 40px 0;
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .project {
+    margin: 20px 0;
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .project {
+    margin: 10px 0;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .project {
+    margin-top: 60px;
+  }
+}
+.project__cards {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+@media screen and (max-width: 1920px) {
+  .project__cards {
+    gap: 5%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .project__cards {
+    gap: 4%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .project__cards {
+    gap: 3%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .project__cards {
+    width: 600px;
+    flex-wrap: wrap;
+    gap: 75px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  .project__cards {
+    gap: 30px;
+    width: 500px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project__cards {
+    gap: 50px;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .project__cards {
+    gap: 30px;
+  }
+}
+.project__cards-container {
+  transition-delay: 0.8s;
+  transition: 0.8s;
+  opacity: 0;
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: transparent;
+  perspective: 1000px;
+}
+@media screen and (max-width: 1920px) {
+  .project__cards-container {
+    width: 270px;
+    height: 450px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .project__cards-container {
+    width: 243px;
+    height: 405px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .project__cards-container {
+    width: 230.85px;
+    height: 384.75px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .project__cards-container {
+    width: 196.2px;
+    height: 327px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project__cards-container {
+    width: 230.85px;
+    height: 384.75px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .project__cards-container {
+    width: 207.85px;
+    height: 342.75px;
+    gap: 30px;
+  }
+}
+.project__cards-container:hover .project__cards-card {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+.project__cards-container .project__cards-card {
+  border-radius: 20px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  background-color: #64645c;
+}
+.project__cards-container .project__cards-card .project__cards-card-front, .project__cards-container .project__cards-card .project__cards-card-back {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+@media screen and (max-width: 1400px) {
+  .project__cards-container .project__cards-card .project__cards-card-front, .project__cards-container .project__cards-card .project__cards-card-back {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .project__cards-container .project__cards-card .project__cards-card-front, .project__cards-container .project__cards-card .project__cards-card-back {
+    padding: 15px;
+  }
+}
+.project__cards-container .project__cards-card .project__cards-card-front-box {
+  display: grid;
+  height: 50%;
+  place-items: center;
+  border-bottom: 1px solid black;
+}
+@media screen and (max-width: 1200px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-box {
+    height: 40%;
+  }
+}
+.project__cards-container .project__cards-card .project__cards-card-front-icon {
+  font-size: 8rem;
+  background-color: #64645c;
+}
+@media screen and (max-width: 1920px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-icon {
+    font-size: 7.2rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-icon {
+    font-size: 6.5rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-icon {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-icon {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-icon {
+    font-size: 6rem;
+  }
+}
+.project__cards-container .project__cards-card .project__cards-card-front-info {
+  position: relative;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1200px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info {
+    height: 60%;
+  }
+}
+.project__cards-container .project__cards-card .project__cards-card-front-info-header {
+  font-weight: 900;
+  padding: 15px 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 1920px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info-header {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info-header {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info-header {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info-header {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info-header {
+    font-size: 1.8rem;
+  }
+}
+.project__cards-container .project__cards-card .project__cards-card-front-info-text {
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 1920px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info-text {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info-text {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info-text {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info-text {
+    font-size: 1.5rem;
+  }
+}
+.project__cards-container .project__cards-card .project__cards-card-front-info-tools {
+  letter-spacing: 1px;
+  font-size: 1.7rem;
+  width: 100%;
+  flex-grow: 1;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f5f5f5;
+}
+@media screen and (max-width: 1920px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info-tools {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info-tools {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info-tools {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .project__cards-container .project__cards-card .project__cards-card-front-info-tools {
+    font-size: 1.5rem;
+  }
+}
+.project__cards-container .project__cards-card .project__cards-card-back {
+  border: 1px solid #102f3e;
+  border-radius: 20px;
+  transform: rotateY(180deg);
+  background-color: #102f3e;
+  display: grid;
+  place-items: center;
+}
+.project__cards-container .project__cards-card .project__cards-card-back-gitIcon {
+  font-size: 10rem;
+}
+@media screen and (max-width: 1920px) {
+  .project__cards-container .project__cards-card .project__cards-card-back-gitIcon {
+    font-size: 9rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .project__cards-container .project__cards-card .project__cards-card-back-gitIcon {
+    font-size: 8.1rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .project__cards-container .project__cards-card .project__cards-card-back-gitIcon {
+    font-size: 7.4rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .project__cards-container .project__cards-card .project__cards-card-back-gitIcon {
+    font-size: 6.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project__cards-container .project__cards-card .project__cards-card-back-gitIcon {
+    font-size: 8.1rem;
+  }
+}/*# sourceMappingURL=MyProject.css.map */

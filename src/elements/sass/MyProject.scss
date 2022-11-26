@@ -1,0 +1,244 @@
+@use './colors' as *;
+
+.project{
+    margin: 50px 0;
+    @media screen and (max-width: 1920px){
+        margin-top: 80px;
+    }
+    @media screen and (max-width: 1600px){
+        margin: 40px 0;
+        margin-top: 70px;
+    }
+    @media screen and (max-width: 1200px){
+        margin: 20px 0;
+        margin-top: 50px;
+    }
+    @media screen and (max-width: 1000px){
+        margin: 10px 0;
+        margin-top: 40px;
+    }
+    @media screen and (max-width: 400px){
+        margin-top: 60px;
+    }
+    &__cards{
+        display: flex;
+        gap: 10%;
+        justify-content: center;
+        @media screen and (max-width: 1920px){
+            gap: 5%;
+        }
+        @media screen and (max-width: 1400px){
+            gap: 4%;
+        }
+        @media screen and (max-width: 1200px){
+            gap: 3%;
+        }
+        @media screen and (max-width: 1000px){
+            flex-wrap: wrap;
+            gap: 75px;
+            margin: 0 auto;
+            width: 600px;
+        }
+        @media screen and (max-width: 800px){
+            gap: 30px;
+            width: 500px;
+        }
+        @media screen and (max-width: 600px){
+            gap: 50px;
+            width: 300px;
+        }
+        @media screen and (max-width: 400px){
+            gap: 30px;
+        }
+        &-container{
+            background-color: transparent;
+            border-radius: 10px;
+            height: 500px;
+            opacity: 0;
+            perspective: 1000px;
+            transition-delay: 0.8s;
+            transition: .8s;
+            width: 300px;
+            @media screen and (max-width: 1920px){
+                height: 450px;
+                width: 270px;
+            }
+            @media screen and (max-width: 1600px){
+                height: 405px;
+                width: 243px;
+            }
+            @media screen and (max-width: 1400px){
+                height: 384px;
+                width: 230px;
+            }
+            @media screen and (max-width: 1200px){
+                height: 327px;
+                width: 196px;
+            }
+            @media screen and (max-width: 600px){
+                height: 385px;
+                width: 230px;
+            }
+            @media screen and (max-width: 400px){
+                gap: 30px;
+                height: 343px;
+                width: 208px;
+            }
+            &:hover .project__cards-card{
+                cursor: pointer;
+                transform: rotateY(180deg);
+            }
+            .project__cards-card{
+                background-color: $mechanic-green;
+                border-radius: 20px;
+                height: 100%;
+                position: relative;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+                width: 100%;
+                .project__cards-card-front, .project__cards-card-back{
+                    backface-visibility: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    padding: 25px;
+                    position: absolute;
+                    -webkit-backface-visibility: hidden;
+                    width: 100%;
+                    @media screen and (max-width: 1400px){
+                        padding: 20px;
+                    }
+                    @media screen and (max-width: 1200px){
+                        padding: 15px;        
+                    }
+                }
+                .project__cards-card-front{
+                    &-box{
+                        border-bottom: 1px solid $black;
+                        display: grid;
+                        height: 50%;
+                        place-items: center;
+                        @media screen and (max-width: 1200px){
+                            height: 40%;       
+                        }
+                    }
+                    &-icon{
+                        background-color: $mechanic-green;
+                        font-size: 8rem;
+                        @media screen and (max-width: 1920px){
+                           font-size: 7.2rem;
+                        }
+                        @media screen and (max-width: 1600px){
+                            font-size: 6.5rem;
+                        }
+                        @media screen and (max-width: 1400px){
+                            font-size: 6rem;
+                        }
+                        @media screen and (max-width: 1200px){
+                            font-size: 5rem;    
+                        }
+                        @media screen and (max-width: 600px){
+                            font-size: 6rem;
+                        }
+                    }
+                    &-info{
+                        display: flex;
+                        flex-direction: column;
+                        height: 50%;
+                        position: relative;
+                        @media screen and (max-width: 1200px){
+                            height: 60%;  
+                        }
+                        &-header{
+                            font-weight: 900;
+                            font-size: 2.2rem;
+                            letter-spacing: 1px;
+                            padding: 15px 0;
+                            @media screen and (max-width: 1920px){
+                                font-size: 2rem;
+                             }
+                             @media screen and (max-width: 1400px){
+                                font-size: 1.8rem;
+                            }
+                            @media screen and (max-width: 1200px){
+                                font-size: 1.7rem;
+                            }
+                            @media screen and (max-width: 600px){
+                                font-size: 2rem;
+                            }
+                            @media screen and (max-width: 400px){
+                                font-size: 1.8rem;
+                            }
+                        }
+                        &-text{
+                            font-size: 1.7rem;
+                            letter-spacing: 1px;
+                            @media screen and (max-width: 1920px){
+                                font-size: 1.6rem;
+                            }
+                            @media screen and (max-width: 1400px){
+                                font-size: 1.5rem;
+                            }
+                            @media screen and (max-width: 600px){
+                                font-size: 1.7rem;
+                            }
+                            @media screen and (max-width: 400px){
+                                font-size: 1.5rem;
+                            }
+                        }
+                        &-tools{
+                            bottom: 0;
+                            color: $white-smoke;
+                            font-size: 1.7rem;
+                            flex-grow: 1;
+                            letter-spacing: 1px;
+                            left: 50%;
+                            position: absolute;
+                            transform: translateX(-50%);
+                            width: 100%;
+                            @media screen and (max-width: 1920px){
+                                font-size: 1.6rem;
+                            }
+                            @media screen and (max-width: 1400px){
+                                font-size: 1.5rem;
+                            }
+                            @media screen and (max-width: 600px){
+                                font-size: 1.7rem;
+                            }
+                            @media screen and (max-width: 400px){
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+                .project__cards-card-back{
+                    background-color: $mechanic-dark-blue;
+                    border: 1px solid $mechanic-dark-blue;
+                    border-radius: 20px;
+                    display: grid;
+                    place-items: center;
+                    transform: rotateY(180deg);
+                    &-gitIcon{
+                        font-size: 10rem;
+                        @media screen and (max-width: 1920px){
+                            font-size: 9rem;
+                        }
+                        @media screen and (max-width: 1600px){
+                            font-size: 8.1rem;
+                        }
+                        @media screen and (max-width: 1400px){
+                            font-size: 7.4rem;
+                        }
+                        @media screen and (max-width: 1200px){
+                            font-size: 6.5rem
+                        }
+                        @media screen and (max-width: 600px){
+                            font-size: 8.1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

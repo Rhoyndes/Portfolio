@@ -1,0 +1,351 @@
+@use './colors' as *;
+@use './fonts' as *;
+
+@keyframes RobotLoading{
+    0%{
+        box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+        -webkit-box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+        -moz-box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+    }20%{
+        box-shadow: inset 0px 0px 10px 5px $robot-signal, 0px 0px 40px 11px $robot-signal;
+        -webkit-box-shadow: inset 0px 0px 10px  5px $robot-signal, 0px 0px 40px 11px $robot-signal;
+        -moz-box-shadow: inset 0px 0px 10px  5px $robot-signal, 0px 0px 40px 11px $robot-signal;
+    }25%{
+        box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+        -webkit-box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+        -moz-box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+    }45%{
+        box-shadow: inset 0px 0px 10px 5px $robot-signal, 0px 0px 40px 11px $robot-signal;
+        -webkit-box-shadow: inset 0px 0px 10px  5px $robot-signal, 0px 0px 40px 11px $robot-signal;
+        -moz-box-shadow: inset 0px 0px 10px  5px $robot-signal, 0px 0px 40px 11px $robot-signal;
+    }
+    50%{
+        box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+        -webkit-box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+        -moz-box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+    }
+    65%{
+        box-shadow: inset 0px 0px 10px 5px $robot-signal, 0px 0px 40px 11px $robot-signal;
+        -webkit-box-shadow: inset 0px 0px 10px  5px $robot-signal, 0px 0px 40px 11px $robot-signal;
+        -moz-box-shadow: inset 0px 0px 10px  5px $robot-signal, 0px 0px 40px 11px $robot-signal;
+    }
+    70%{
+        box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+        -webkit-box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+        -moz-box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+    }
+    75%{
+        box-shadow: inset 0px 0px 10px 5px $robot-signal, 0px 0px 40px 11px $robot-signal;
+        -webkit-box-shadow: inset 0px 0px 10px  5px $robot-signal, 0px 0px 40px 11px $robot-signal;
+        -moz-box-shadow: inset 0px 0px 10px  5px $robot-signal, 0px 0px 40px 11px $robot-signal;
+    }
+    80%{
+        box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+        -webkit-box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+        -moz-box-shadow: inset 0px 0px 10px 5px $mechanic-rust;
+    }
+    100%{
+        box-shadow: inset 0px 0px 10px -3px $robot-signal, 0px 0px 40px 11px $robot-signal;
+        -webkit-box-shadow: inset 0px 0px 10px  -3px $robot-signal, 0px 0px 40px 11px $robot-signal;
+        -moz-box-shadow: inset 0px 0px 10px  -3px $robot-signal, 0px 0px 40px 11px $robot-signal;
+    }
+}
+
+.roboto{
+    align-items: center;
+    border: 2px solid $mechanic-dark-blue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 90%;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    transition: .5s;
+    width: 50%;
+    &__head{
+        height: 40%;
+        width: 60%;
+        &-hat{
+            background-color:$mechanic-brown;
+            border-top-left-radius: 100%;
+            border-top-right-radius: 100px;
+            height: 35%;
+            margin: 0 auto;
+            position: relative;
+            width: 5%;
+            &::before{
+                animation: RobotLoading 4s forwards ease-in-out;
+                background-color: $mechanic-medium-gray;
+                border-radius: 50%;
+                border: none;
+                content: '';
+                height: 30%;
+                left: 50%;
+                position: absolute;
+                transform: translateX(-50%);
+                width: 300%;
+            }
+        }
+        &-face{
+            background-color: $mechanic-medium-gray;
+            border-radius: 10%;
+            display: flex;
+            flex-wrap: wrap;
+            height: 65%;
+            justify-content: center;
+            width: 100%;
+            &-eye{
+                background-color: $white;
+                border-radius: 50%;
+                height: 31.5%;
+                margin: 15% 10%;
+                overflow: hidden;
+                position: relative;
+                width: 21.42%;
+                &-pupil{
+                    background-color: $light-black;
+                    border-radius: 50%;
+                    height: 50%;
+                    left: 50%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 50%;
+                }
+            }
+        }
+    
+    }
+    &__neck{
+        background-color: $mechanic-brown;
+        box-shadow: inset 0px 0px 7px -1px $mechanic-rust;
+        height: 5%;
+        position: relative;
+        width: 15%;
+        -webkit-box-shadow: inset 0px 0px 7px -1px $mechanic-rust;
+        -moz-box-shadow: inset 0px 0px 7px -1px $mechanic-rust;
+        &::before{
+            background-color: $mechanic-medium-gray;
+            border-radius: 10%;
+            bottom: 0;
+            content: '';
+            height: 50%;
+            left: 50%;
+            position: absolute;
+            width: 150%;
+            transform: translateX(-50%);
+        }
+    }
+    @keyframes Move {
+        0%{
+            rotate: -5deg;
+        }15%{
+            rotate: -50deg
+        }20%{
+            rotate: -50deg
+        }40%{
+            rotate: -110deg
+        }45%{
+            rotate: -110deg;
+        }50%{
+            rotate: -130deg
+        }60%{
+            rotate: -120deg
+        }65%{
+            rotate: -120deg
+        }80%{
+            rotate: -70deg;
+        }85%{
+            rotate: -70deg;
+        }93%{
+            rotate: -30deg;
+        }
+        100%{
+            rotate: -5deg;
+        }
+    }
+    &__body{
+        background-color: $mechanic-medium-gray;
+        border-radius: 5%;
+        display: grid;
+        height: 35%;
+        place-items: center;
+        position: relative;
+        width: 70%;
+        &::before{
+            background-color: $mechanic-medium-gray;
+            border-radius: 30px 30px 30% 30%;
+            content: '';
+            height: 20%;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            top: 0px;
+            width: 142%;
+            z-index: 1;
+        }
+
+        @keyframes message {
+            from{
+                left: 100%;
+            }to{
+                left: -160%;
+            }
+        }
+        @media screen and (max-width: 1920px){
+            @keyframes message {
+                from{
+                    left: 100%;
+                }to{
+                    left: -180%;
+                }
+            }
+        }
+        @media screen and (max-width: 1200px){
+            @keyframes message {
+                from{
+                    left: 100%;
+                }to{
+                    left: -220%;
+                }
+            }
+        }
+        @media screen and (max-width: 1000px){
+            @keyframes message {
+                from{
+                    left: 100%;
+                }to{
+                    left: -280%;
+                }
+            }
+        }
+        @media screen and (max-width: 800px){
+            @keyframes message {
+                from{
+                    left: 100%;
+                }to{
+                    left: -250%;
+                }
+            }
+        }
+        @media screen and (max-width: 600px){
+            @keyframes message {
+                from{
+                    left: 100%;
+                }to{
+                    left: -250%;
+                }
+            }
+        }
+
+        &-screen{
+            background: $screen;
+            background: radial-gradient(circle, $screen 83%, $screen 100%);
+            box-shadow: 0px 0px 15px 0px $screen;
+            border-radius: 5%;
+            height: 55%;
+            margin-top: 10%;
+            overflow: hidden;
+            position: relative;
+            width: 75%;
+            -webkit-box-shadow: 0px 0px 15px 0px $screen;
+            -moz-box-shadow: 0px 0px 15px 0px $screen;
+            &-text{
+                animation: message 6s 2.5s linear infinite backwards;
+                color: $screen-text;
+                font-weight: bold;
+                font-size: 1.5vw;
+                font-family: $roboto;
+                left: -160%;
+                letter-spacing: 1px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: max-content;
+                word-break:break-all;
+                @media screen and (max-width: 1200px){
+                    font-size: 2vw;
+                }
+                @media screen and (max-width: 1000px){
+                    font-size: 2.5vw;
+                }
+                @media screen and (max-width: 600px){
+                    font-size: 5vw;
+                }
+            }
+        }
+        &-hand{
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            height: 100%;
+            position: absolute;
+            top: 7%;
+            width: 19%;
+            background-color: $mechanic-medium-gray;
+            &-left{
+                border-bottom-right-radius: 200%;
+                left: -21.5%;
+                &::before{
+                    background-color: $mechanic-medium-gray;
+                    border-radius: 50px 50px 0 150%;
+                    content: '';
+                    height: 95%;
+                    position: absolute;
+                    width: 100%;
+                }
+            }
+            &-right{
+                border-bottom-left-radius: 200%;
+                cursor: pointer;
+                transform-origin: top;
+                right: -21.5%;
+                &::before{
+                    background-color: $mechanic-rust;
+                    border-radius: 50px 50px 150% 0;
+                    content: '';
+                    height: 95%;
+                    position: absolute;
+                    width: 100%;
+                    z-index: 100;
+                }
+            }
+        }
+    }
+    &__legs{
+        display: flex;
+        gap: 10%;
+        height: 20%;
+        justify-content: center;
+        width: 45%;
+        .roboto__leg{
+            background-color: $mechanic-medium-gray;
+            height: 100%;
+            position: relative;
+            width: 42%;
+            &-left::before{
+                background-color: $mechanic-rust;
+                bottom: 0;
+                border-radius: 30px 10px 0 0;
+                content: '';
+                height: 27%;
+                left: -25%;
+                position: absolute;
+                width: 130%;
+            }
+            &-right::before{
+                background-color: $mechanic-rust;
+                border-radius: 10px 30px 0 0;
+                bottom: 0;
+                content: '';
+                height: 27%;
+                position: absolute;
+                right: -25%;
+                width: 130%;
+            }
+        }
+    }
+}

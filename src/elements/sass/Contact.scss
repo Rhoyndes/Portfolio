@@ -1,0 +1,184 @@
+@use './colors' as *;
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+.contact{
+    align-items: center;
+    background-color: $component-backgroundColor;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    margin: 395px auto;
+    margin-bottom: 0px;
+    opacity: 0;
+    position: relative;
+    transition-delay: 0.8s;
+    transition: .8s;
+    width: 60%;
+    @media screen and (max-width: 1920px){
+      margin-top: 345px;
+    }
+    @media screen and (max-width: 1600px){
+      margin-top: 310px;
+    }
+    @media screen and (max-width: 1400px){
+      width: 70%;
+    }
+    @media screen and (max-width: 1200px){
+      margin-top: 260px;
+      width: 80%;
+    }
+    @media screen and (max-width: 1000px){
+      width: 80%;
+    }
+    @media screen and (max-width: 800px){
+      margin-top: 220px;
+    }
+    @media screen and (max-width: 600px){
+      height: 250px;
+    }
+    &-icon{
+        background-color: $mechanic-dark-blue;
+        bottom: -75px;
+        border-radius: 10px;
+        display: grid;
+        height: 300px;
+        left: 10%;
+        place-content: center;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        @media screen and (max-width: 1920px){
+          bottom: -62.5px;
+          height: 250px;
+          width: 167px;
+        }
+        @media screen and (max-width: 1600px){
+          bottom: -38px;
+          height: 225px;
+          width: 150px;
+        }
+        @media screen and (max-width: 1400px){
+          left: 12%;
+        }
+        @media screen and (max-width: 1200px){
+          bottom: -20px;
+          height: 180px;
+          width: 120px;
+        }
+        @media screen and (max-width: 1000px){
+          left: 15%;
+        }
+        @media screen and (max-width: 600px){
+          bottom: 70px;
+        }
+        &-img{
+            backface-visibility: hidden;
+            color: $white-smoke;
+            font-size: 8rem;
+            perspective: 1000px;
+            transform: translate3d(0, 0, 0);
+            @media screen and (max-width: 1920px){
+              font-size: 7rem;
+            }
+            @media screen and (max-width: 1600px){
+              font-size: 6.3rem;
+            }
+            @media screen and (max-width: 1200px){
+              font-size: 5rem;
+            }
+        }
+    }
+    &-inbox{
+        border-bottom: 1px solid $mechanic-green;
+        display: flex;
+        gap: 100px;
+        justify-content: flex-end;
+        margin-right: 100px;
+        padding-bottom: 15px;
+        position: relative;
+        width: 100%;
+        @media screen and (max-width: 1920px){
+          gap: 70px;
+        }
+        @media screen and (max-width: 1600px){
+          gap: 50px;
+        }
+        @media screen and (max-width: 1200px){
+          margin-right: 50px;
+        }
+        @media screen and (max-width: 1000px){
+          margin-right: 25px;
+        }
+        @media screen and (max-width: 800px){
+          flex-direction: column;
+          gap: 0;
+        }
+        @media screen and (max-width: 800px){
+          margin-top: 10px;
+        }
+        @media screen and (max-width: 400px){
+          margin-top: 80px;
+          padding-bottom: 0;
+        }
+        &::before{
+            background-color: $mechanic-green;
+            bottom: -1px;
+            content: '';
+            height: 1px;
+            left: -100px;
+            position: absolute;
+            width: 100px;
+            @media screen and (max-width: 1200px){
+              left: -50px;
+              width: 50px;
+            }
+            @media screen and (max-width: 1000px){
+              left: -25px;
+              width: 25px;
+            }
+        }
+        & p{
+            color: $white-smoke;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-top: 75px;
+            margin-left: 20px;
+            @media screen and (max-width: 1920px){
+              font-size: 1.8rem;
+            }
+            @media screen and (max-width: 1600px){
+              font-size: 1.8rem;
+            }
+            @media screen and (max-width: 1400px){
+              font-size: 1.7rem;
+            }
+            @media screen and (max-width: 800px){
+              font-size: 1.5rem;
+              margin-top: 15px;
+              margin-left: 35%;
+            }
+            @media screen and (max-width: 600px){
+              margin-top: 10px;
+              margin-left: 0;
+              padding-left: 10px;
+            }
+        }
+    }
+}
